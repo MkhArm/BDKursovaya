@@ -1,0 +1,31 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Настройки подключения к базе данных -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost/airport_db</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">221199</property>
+
+        <!-- Другие настройки Hibernate -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Маппинг классов сущностей -->
+        <!-- Здесь добавьте пути к классам сущностей вашего приложения -->
+        <mapping class="org.example.hibernate.RunwayEntity"/>
+        <mapping class="org.example.hibernate.FlightEntity"/>
+        <mapping class="org.example.hibernate.AircraftEntity"/>
+        <mapping class="org.example.hibernate.AssignedAircraftEntity"/>
+        <mapping class="org.example.hibernate.ShiftEntity"/>
+        <mapping class="org.example.hibernate.AircraftBeingEntity"/>
+        <mapping class="org.example.hibernate.PreparingRunwayEntity"/>
+        <mapping class="org.example.hibernate.EmployeeEntity"/>
+        <mapping class="org.example.hibernate.ShiftCompositionEntity"/>
+        <mapping class="org.example.hibernate.CrewEntity"/>
+        <mapping class="org.example.hibernate.CrewCompositionEntity"/>
+    </session-factory>
+</hibernate-configuration>
